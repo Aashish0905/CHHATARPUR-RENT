@@ -1,0 +1,895 @@
+/* =========================================================
+   CHHATARPUR RENT — RESPONSIVE.CSS
+   Global responsive overrides
+========================================================= */
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .container {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .hero-content {
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(100% - 32px, 960px);
+  }
+
+  /* -------------------------
+     NAVBAR
+  ------------------------- */
+
+  .desktop-nav {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .login-link,
+  .signup-link {
+    font-size: 13px;
+  }
+
+  .post-property-btn {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    padding: 72px 0 80px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-search-box {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .hero-trust-points {
+    justify-content: center;
+  }
+
+  .hero-quick-links {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto 0;
+  }
+
+  /* -------------------------
+     PROPERTY GRID
+  ------------------------- */
+
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+  }
+
+  /* -------------------------
+     HOW IT WORKS
+  ------------------------- */
+
+  .how-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* -------------------------
+     SELL PAGE
+  ------------------------- */
+
+  .sell-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-sidebar {
+    position: static;
+  }
+
+  .sell-owner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* -------------------------
+     DASHBOARD
+  ------------------------- */
+
+  .dashboard-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .dashboard-sidebar {
+    padding: 20px 14px;
+  }
+
+  .dashboard-nav-link {
+    padding: 11px 12px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE NAVIGATION BREAKPOINT
+========================================================= */
+
+@media (max-width: 900px) {
+  .desktop-nav,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+
+  .navbar {
+    min-height: 72px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 28px, 680px);
+  }
+
+  /* -------------------------
+     GLOBAL
+  ------------------------- */
+
+  h1 {
+    line-height: 1.08;
+  }
+
+  h2 {
+    line-height: 1.15;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* -------------------------
+     NAVBAR
+  ------------------------- */
+
+  .navbar {
+    min-height: 68px;
+  }
+
+  .brand-text strong {
+    font-size: 14px;
+  }
+
+  .brand-text span {
+    font-size: 10px;
+  }
+
+  .brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobile-nav {
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    padding: 54px 0 62px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-search-box {
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .hero-search-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-search-tab {
+    justify-content: center;
+  }
+
+  .hero-search-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-button {
+    width: 100%;
+  }
+
+  .hero-trust-points {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-quick-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  /* -------------------------
+     SECTIONS
+  ------------------------- */
+
+  .property-section {
+    padding: 70px 0;
+  }
+
+  .section-heading-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .section-link {
+    align-self: flex-start;
+  }
+
+  /* -------------------------
+     PROPERTY GRID
+  ------------------------- */
+
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .property-card {
+    width: 100%;
+  }
+
+  /* -------------------------
+     PROPERTY CARD
+  ------------------------- */
+
+  .property-card-content {
+    padding: 18px;
+  }
+
+  .property-title {
+    font-size: 19px;
+  }
+
+  .property-features {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .property-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* -------------------------
+     HOW IT WORKS
+  ------------------------- */
+
+  .how-section,
+  .about-home-section,
+  .contact-home-section {
+    padding: 70px 0;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .how-card {
+    padding: 22px;
+  }
+
+  /* -------------------------
+     BUY / RENT FILTERS
+  ------------------------- */
+
+  .page-header {
+    padding: 48px 0 34px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .filter-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-actions {
+    width: 100%;
+  }
+
+  .filter-actions button {
+    width: 100%;
+  }
+
+  .mobile-filter-button {
+    display: flex;
+  }
+
+  .filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .active-filter-chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* -------------------------
+     SELL PAGE
+  ------------------------- */
+
+  .sell-page {
+    padding: 40px 0 70px;
+  }
+
+  .sell-page-header {
+    margin-bottom: 30px;
+  }
+
+  .sell-page-header h1 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .sell-card {
+    border-radius: 18px;
+  }
+
+  .sell-card-header {
+    padding: 20px;
+  }
+
+  .sell-steps {
+    overflow-x: auto;
+    padding: 14px 16px;
+    gap: 18px;
+  }
+
+  .sell-step {
+    min-width: 90px;
+  }
+
+  .sell-form-section {
+    padding: 22px 20px;
+  }
+
+  .sell-form-grid,
+  .sell-owner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .sell-back-btn,
+  .sell-next-btn,
+  .sell-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sell-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* -------------------------
+     PROPERTY DETAILS
+  ------------------------- */
+
+  .property-details-page {
+    padding: 36px 0 70px;
+  }
+
+  .property-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-details-image {
+    min-height: 300px;
+  }
+
+  .property-details-actions {
+    flex-wrap: wrap;
+  }
+
+  /* -------------------------
+     AUTH
+  ------------------------- */
+
+  .login-page,
+  .signup-page {
+    padding: 44px 0 70px;
+  }
+
+  .login-container,
+  .signup-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-info,
+  .signup-info {
+    display: none;
+  }
+
+  .login-card,
+  .signup-card {
+    width: 100%;
+  }
+
+  .auth-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-type-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* -------------------------
+     DASHBOARD
+  ------------------------- */
+
+  .dashboard-page {
+    min-height: auto;
+  }
+
+  .dashboard-layout {
+    display: block;
+  }
+
+  .dashboard-sidebar {
+    display: none;
+  }
+
+  .dashboard-main {
+    width: 100%;
+  }
+
+  .dashboard-topbar {
+    padding: 18px 0;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 28px;
+  }
+
+  .dashboard-topbar-actions {
+    gap: 8px;
+  }
+
+  .dashboard-post-btn {
+    padding: 10px 13px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-stat-card {
+    padding: 16px;
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 22px, 460px);
+  }
+
+  /* -------------------------
+     NAVBAR
+  ------------------------- */
+
+  .navbar {
+    min-height: 64px;
+  }
+
+  .brand-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .brand-text strong {
+    font-size: 13px;
+  }
+
+  /* -------------------------
+     HERO
+  ------------------------- */
+
+  .hero {
+    padding: 42px 0 50px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-search-box {
+    border-radius: 16px;
+  }
+
+  .hero-search-tabs {
+    gap: 3px;
+  }
+
+  .hero-search-tab {
+    padding: 11px 6px;
+    font-size: 12px;
+  }
+
+  .hero-search-field {
+    padding: 13px;
+  }
+
+  .hero-visual {
+    min-height: 310px;
+  }
+
+  .hero-floating-card {
+    transform: scale(0.86);
+  }
+
+  /* -------------------------
+     SECTION
+  ------------------------- */
+
+  .property-section,
+  .how-section,
+  .about-home-section,
+  .contact-home-section {
+    padding: 56px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-link {
+    font-size: 13px;
+  }
+
+  /* -------------------------
+     PROPERTY CARD
+  ------------------------- */
+
+  .property-image-wrap {
+    min-height: 220px;
+  }
+
+  .property-card-content {
+    padding: 16px;
+  }
+
+  .property-title {
+    font-size: 18px;
+  }
+
+  .property-card-bottom {
+    align-items: flex-end;
+  }
+
+  .property-price strong {
+    font-size: 20px;
+  }
+
+  .property-actions {
+    gap: 8px;
+  }
+
+  .property-call-btn,
+  .property-whatsapp-btn {
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+
+  /* -------------------------
+     FILTERS
+  ------------------------- */
+
+  .filter-card {
+    padding: 14px;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-input,
+  .filter-select {
+    width: 100%;
+  }
+
+  /* -------------------------
+     SELL
+  ------------------------- */
+
+  .sell-form-section {
+    padding: 18px 16px;
+  }
+
+  .sell-card-header {
+    padding: 18px 16px;
+  }
+
+  .sell-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .sell-upload-box {
+    padding: 24px 14px;
+  }
+
+  /* -------------------------
+     AUTH
+  ------------------------- */
+
+  .login-card,
+  .signup-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  .account-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-submit-btn {
+    width: 100%;
+  }
+
+  /* -------------------------
+     DASHBOARD
+  ------------------------- */
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .dashboard-stat-icon {
+    flex-shrink: 0;
+  }
+
+  .dashboard-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .dashboard-topbar-actions {
+    width: 100%;
+  }
+
+  .dashboard-post-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* -------------------------
+     FOOTER
+  ------------------------- */
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 18px);
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-search-tab {
+    font-size: 11px;
+  }
+
+  .property-card-badges {
+    gap: 5px;
+  }
+
+  .demo-badge,
+  .listing-status-badge {
+    font-size: 9px;
+    padding: 5px 7px;
+  }
+
+  .property-type-pill {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+  .navbar-wrapper,
+  .mobile-nav,
+  .mobile-menu-btn,
+  .hero-search-box,
+  .property-actions,
+  .favorite-btn,
+  .footer {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .property-card {
+    break-inside: avoid;
+  }
+}

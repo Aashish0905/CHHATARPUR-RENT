@@ -1,0 +1,1011 @@
+/* =========================================================
+   SELL / POST PROPERTY
+   CHHATARPUR RENT
+========================================================= */
+
+.sell-page {
+  min-height: calc(100vh - 78px);
+  padding: 65px 0 90px;
+  background: var(--bg);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.sell-page-header {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.sell-page-header h1 {
+  margin: 13px 0 12px;
+  color: var(--dark);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 850;
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.sell-page-header p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.sell-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 25px;
+  align-items: start;
+}
+
+/* =========================================================
+   SELL CARD
+========================================================= */
+
+.sell-card {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(8, 20, 15, 0.06);
+}
+
+.sell-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.sell-card-header h2 {
+  margin: 0;
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.sell-card-header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.sell-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.sell-step {
+  position: relative;
+  min-width: 0;
+  padding: 11px 7px;
+
+  color: #819088;
+  background: #f5f8f6;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: 750;
+  text-align: center;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sell-step.active {
+  color: var(--primary-dark);
+  background: var(--primary-light);
+  border-color: rgba(31, 167, 111, 0.18);
+}
+
+.sell-step.completed {
+  color: var(--primary-dark);
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.sell-form-section {
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.sell-form-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.sell-form-section + .sell-form-section {
+  margin-top: 30px;
+}
+
+.sell-form-section h3 {
+  margin: 0 0 5px;
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.sell-form-section > p {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SELL / RENT TOGGLE
+========================================================= */
+
+.sell-listing-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6px;
+  max-width: 360px;
+  margin-bottom: 22px;
+  padding: 5px;
+
+  background: #f1f5f2;
+  border-radius: 12px;
+}
+
+.sell-listing-option {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--muted);
+  background: transparent;
+
+  border: 0;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sell-listing-option:hover {
+  color: var(--dark);
+}
+
+.sell-listing-option.active {
+  color: var(--dark);
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(8, 20, 15, 0.07);
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.sell-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.sell-form-grid.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sell-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sell-form-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.sell-form-field label {
+  color: #35443d;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.sell-form-field input,
+.sell-form-field select,
+.sell-form-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+
+  color: var(--dark);
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sell-form-field textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.sell-form-field input::placeholder,
+.sell-form-field textarea::placeholder {
+  color: #a1aca6;
+}
+
+.sell-form-field input:hover,
+.sell-form-field select:hover,
+.sell-form-field textarea:hover {
+  border-color: #c8d7cf;
+}
+
+.sell-form-field input:focus,
+.sell-form-field select:focus,
+.sell-form-field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(31, 167, 111, 0.1);
+}
+
+/* =========================================================
+   INPUT WITH PREFIX
+========================================================= */
+
+.sell-input-prefix {
+  position: relative;
+}
+
+.sell-input-prefix span {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.sell-input-prefix input {
+  padding-left: 40px;
+}
+
+/* =========================================================
+   OWNER DETAILS
+========================================================= */
+
+.sell-owner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.sell-owner-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sell-owner-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.sell-owner-field label {
+  color: #35443d;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.sell-owner-field input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+
+  color: var(--dark);
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sell-owner-field input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(31, 167, 111, 0.1);
+}
+
+/* =========================================================
+   OTP
+========================================================= */
+
+.sell-otp-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.sell-otp-input {
+  flex: 1;
+}
+
+.sell-otp-button {
+  min-height: 48px;
+  padding: 0 16px;
+
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border: 1px solid rgba(31, 167, 111, 0.18);
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sell-otp-button:hover {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+/* =========================================================
+   DOCUMENT UPLOAD
+========================================================= */
+
+.sell-upload-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+  padding: 20px;
+
+  background: #f8faf9;
+
+  border: 1px dashed #c9d8d0;
+  border-radius: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.sell-upload-box:hover {
+  background: var(--primary-light);
+  border-color: rgba(31, 167, 111, 0.35);
+}
+
+.sell-upload-icon {
+  width: 45px;
+  height: 45px;
+
+  flex: 0 0 45px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--primary-dark);
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+}
+
+.sell-upload-content {
+  min-width: 0;
+}
+
+.sell-upload-content strong {
+  display: block;
+
+  color: var(--dark);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.sell-upload-content span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.sell-upload-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   PHOTO UPLOAD
+========================================================= */
+
+.sell-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.sell-photo-box {
+  position: relative;
+
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  color: var(--muted);
+  background: #f8faf9;
+
+  border: 1px dashed #c9d8d0;
+  border-radius: 13px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sell-photo-box:hover {
+  transform: translateY(-2px);
+
+  background: var(--primary-light);
+  border-color: rgba(31, 167, 111, 0.35);
+}
+
+.sell-photo-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.sell-photo-box-content svg {
+  color: var(--primary);
+}
+
+.sell-photo-box-content strong {
+  color: var(--dark);
+  font-size: 11px;
+}
+
+.sell-photo-box-content span {
+  font-size: 10px;
+}
+
+/* =========================================================
+   REVIEW SUMMARY
+========================================================= */
+
+.sell-review-box {
+  padding: 20px;
+
+  background: #f7faf8;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.sell-review-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 11px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.sell-review-row:first-child {
+  padding-top: 0;
+}
+
+.sell-review-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.sell-review-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.sell-review-value {
+  max-width: 60%;
+
+  color: var(--dark);
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-align: right;
+}
+
+/* =========================================================
+   AGREEMENT
+========================================================= */
+
+.sell-agreement {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+  margin-top: 20px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.sell-agreement input {
+  width: 15px;
+  height: 15px;
+
+  flex: 0 0 15px;
+
+  margin-top: 2px;
+
+  accent-color: var(--primary);
+}
+
+.sell-agreement a {
+  color: var(--primary-dark);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.sell-agreement a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.sell-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 24px;
+
+  border-top: 1px solid var(--border);
+}
+
+.sell-back-btn,
+.sell-next-btn,
+.sell-submit-btn {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+  padding: 0 17px;
+
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sell-back-btn {
+  color: var(--muted);
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.sell-back-btn:hover {
+  color: var(--dark);
+  border-color: #c8d7cf;
+}
+
+.sell-next-btn,
+.sell-submit-btn {
+  color: #ffffff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.sell-next-btn:hover,
+.sell-submit-btn:hover {
+  transform: translateY(-2px);
+
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+
+  box-shadow: 0 9px 20px rgba(31, 167, 111, 0.18);
+}
+
+/* =========================================================
+   SAFETY SIDEBAR
+========================================================= */
+
+.sell-sidebar {
+  position: sticky;
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.sell-sidebar-card {
+  padding: 22px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(8, 20, 15, 0.05);
+}
+
+.sell-sidebar-card h3 {
+  margin: 0 0 8px;
+
+  color: var(--dark);
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.sell-sidebar-card > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.sell-safety-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+  margin-top: 17px;
+}
+
+.sell-safety-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.sell-safety-icon {
+  width: 30px;
+  height: 30px;
+
+  flex: 0 0 30px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border-radius: 8px;
+}
+
+.sell-safety-item strong {
+  display: block;
+
+  color: var(--dark);
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.sell-safety-item span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SUCCESS / UNDER REVIEW
+========================================================= */
+
+.sell-success {
+  max-width: 720px;
+
+  margin: 45px auto 0;
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  box-shadow: 0 15px 45px rgba(8, 20, 15, 0.07);
+}
+
+.sell-success-icon {
+  width: 70px;
+  height: 70px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 18px;
+
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border: 1px solid rgba(31, 167, 111, 0.15);
+  border-radius: 50%;
+}
+
+.sell-success h2 {
+  margin: 0 0 9px;
+
+  color: var(--dark);
+
+  font-size: 28px;
+  font-weight: 850;
+
+  letter-spacing: -0.035em;
+}
+
+.sell-success p {
+  max-width: 530px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .sell-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-sidebar {
+    position: static;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .sell-page {
+    padding: 48px 0 65px;
+  }
+
+  .sell-page-header {
+    margin-bottom: 28px;
+  }
+
+  .sell-page-header h1 {
+    font-size: 36px;
+  }
+
+  .sell-page-header p {
+    font-size: 13px;
+  }
+
+  .sell-card {
+    padding: 20px 17px;
+    border-radius: 18px;
+  }
+
+  .sell-card-header {
+    margin-bottom: 22px;
+  }
+
+  .sell-card-header h2 {
+    font-size: 21px;
+  }
+
+  .sell-steps {
+    gap: 5px;
+  }
+
+  .sell-step {
+    padding: 9px 4px;
+    font-size: 8px;
+  }
+
+  .sell-form-grid,
+  .sell-form-grid.three-columns,
+  .sell-owner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-form-field.full-width,
+  .sell-owner-field.full-width {
+    grid-column: auto;
+  }
+
+  .sell-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sell-photo-box {
+    min-height: 115px;
+  }
+
+  .sell-otp-box {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sell-otp-button {
+    width: 100%;
+  }
+
+  .sell-form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .sell-back-btn,
+  .sell-next-btn,
+  .sell-submit-btn {
+    width: 100%;
+  }
+
+  .sell-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-success {
+    margin-top: 30px;
+    padding: 35px 20px;
+    border-radius: 19px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .sell-card {
+    padding: 18px 14px;
+  }
+
+  .sell-steps {
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    overflow-x: auto;
+  }
+
+  .sell-step {
+    min-width: 58px;
+  }
+
+  .sell-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .sell-listing-option,
+  .sell-upload-box,
+  .sell-photo-box,
+  .sell-next-btn,
+  .sell-submit-btn {
+    transition: none;
+  }
+}

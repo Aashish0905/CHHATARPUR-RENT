@@ -1,0 +1,633 @@
+/* =========================================================
+   CHHATARPUR RENT — NAVBAR
+   ========================================================= */
+
+/* =========================================================
+   NAVBAR WRAPPER
+   ========================================================= */
+
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-bottom: 1px solid #e8eeeb;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: min(calc(100% - 48px), 1200px);
+  min-height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  flex-shrink: 0;
+
+  color: #101814;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #1fa76f;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(31, 167, 111, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.brand:hover .brand-icon {
+  transform: translateY(-2px) rotate(-2deg);
+
+  box-shadow:
+    0 12px 25px rgba(31, 167, 111, 0.24);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brand-text strong {
+  color: #101814;
+
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.4px;
+}
+
+.brand-text span {
+  color: #1fa76f;
+
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   DESKTOP NAV
+   ========================================================= */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-left: auto;
+  margin-right: 28px;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  min-height: 40px;
+  padding: 0 11px;
+
+  border-radius: 9px;
+
+  background: transparent;
+  color: #66736d;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #188e5d;
+  background: #f2f8f5;
+}
+
+.nav-link.active {
+  color: #188e5d;
+  background: #eff8f4;
+}
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+
+  width: 4px;
+  height: 4px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #1fa76f;
+}
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+
+  width: 190px;
+  padding: 8px;
+
+  border: 1px solid #e2ebe6;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(15, 35, 25, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform:
+    translateY(-7px)
+    scale(0.98);
+
+  transform-origin: top right;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 40px;
+
+  padding: 0 12px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #56645d;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+
+  text-decoration: none;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: #f1f8f4;
+  color: #188e5d;
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   NAV SECTION BUTTON
+   ========================================================= */
+
+.nav-section-button {
+  border: 0;
+  background: transparent;
+
+  font: inherit;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   NAV ACTIONS
+   ========================================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-link,
+.signup-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 40px;
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-link {
+  color: #53615a;
+}
+
+.login-link:hover {
+  color: #188e5d;
+  background: #f1f8f4;
+}
+
+.signup-link {
+  color: #188e5d;
+}
+
+.signup-link:hover {
+  background: #eff8f4;
+}
+
+/* =========================================================
+   POST PROPERTY BUTTON
+   ========================================================= */
+
+.post-property-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  min-height: 42px;
+  padding: 0 15px;
+
+  border-radius: 10px;
+
+  background: #1fa76f;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 7px 18px rgba(31, 167, 111, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-property-btn:hover {
+  background: #188e5d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 11px 24px rgba(31, 167, 111, 0.24);
+}
+
+.post-property-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  border: 1px solid #e1e8e4;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #1b2721;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  border-color: #b8d8c8;
+  background: #f1f8f4;
+  color: #188e5d;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MOBILE NAV
+   ========================================================= */
+
+.mobile-nav {
+  display: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .desktop-nav {
+    gap: 1px;
+    margin-right: 15px;
+  }
+
+  .nav-link {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .nav-actions {
+    gap: 3px;
+  }
+
+  .login-link,
+  .signup-link {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .post-property-btn {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    min-height: 70px;
+  }
+
+  .desktop-nav,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 100%;
+
+    max-height: 0;
+
+    padding: 0 18px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid transparent;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease,
+      opacity 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .mobile-nav-open {
+    max-height: 700px;
+
+    padding-top: 12px;
+    padding-bottom: 16px;
+
+    border-bottom-color: #e8eeeb;
+
+    opacity: 1;
+  }
+
+  .mobile-nav > a,
+  .mobile-nav > button {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0 13px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #53615a;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-nav > a:hover,
+  .mobile-nav > a.active,
+  .mobile-nav > button:hover {
+    background: #eff8f4;
+    color: #188e5d;
+
+    transform: translateX(3px);
+  }
+
+  .mobile-nav-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 10px;
+    padding-top: 13px;
+
+    border-top: 1px solid #edf1ef;
+  }
+
+  .mobile-nav-actions > a {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #53615a;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    text-decoration: none;
+
+    background: #f5f8f6;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .mobile-nav-actions > a:hover {
+    background: #eff8f4;
+    color: #188e5d;
+    transform: translateY(-1px);
+  }
+
+  .mobile-nav-actions .mobile-post-btn {
+    grid-column: 1 / -1;
+
+    gap: 7px;
+
+    background: #1fa76f;
+    color: #ffffff;
+  }
+
+  .mobile-nav-actions .mobile-post-btn:hover {
+    background: #188e5d;
+    color: #ffffff;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .navbar {
+    width: calc(100% - 32px);
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-text strong {
+    font-size: 14px;
+  }
+
+  .brand-text span {
+    font-size: 9px;
+  }
+
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

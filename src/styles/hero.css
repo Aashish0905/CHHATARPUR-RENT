@@ -1,0 +1,815 @@
+/* =========================================================
+   CHHATARPUR RENT — HERO
+   ========================================================= */
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  padding: 75px 0 55px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(31, 167, 111, 0.08),
+      transparent 28%
+    ),
+    #ffffff;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -220px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(31, 167, 111, 0.045);
+
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #dcebe4;
+  border-radius: 999px;
+
+  background: #f4faf7;
+  color: #188e5d;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.hero-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #1fa76f;
+
+  box-shadow:
+    0 0 0 5px rgba(31, 167, 111, 0.1);
+}
+
+.hero h1 {
+  max-width: 650px;
+
+  margin: 22px 0 18px;
+
+  color: #101814;
+
+  font-size: clamp(42px, 5.5vw, 68px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  font-weight: 850;
+}
+
+.hero h1 span {
+  color: #1fa76f;
+}
+
+.hero-description {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #68756f;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SEARCH BOX
+   ========================================================= */
+
+.hero-search-box {
+  width: 100%;
+  max-width: 690px;
+
+  margin-top: 34px;
+
+  padding: 8px;
+
+  border: 1px solid #dfe9e4;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(15, 35, 25, 0.09);
+}
+
+.hero-search-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-bottom: 8px;
+}
+
+.hero-search-tab {
+  min-height: 35px;
+
+  padding: 0 14px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #75827b;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-search-tab:hover {
+  color: #188e5d;
+  background: #f1f8f4;
+
+  transform: translateY(-1px);
+}
+
+.hero-search-tab.active {
+  background: #eff8f4;
+  color: #188e5d;
+}
+
+/* =========================================================
+   SEARCH FIELDS
+   ========================================================= */
+
+.hero-search-fields {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    1fr
+    1fr
+    auto;
+
+  gap: 7px;
+}
+
+.hero-search-field {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-height: 54px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e5ebe8;
+  border-radius: 11px;
+
+  background: #fafcfb;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-search-field:focus-within {
+  border-color: #8bcfaf;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(31, 167, 111, 0.08);
+}
+
+.hero-search-field svg {
+  flex-shrink: 0;
+
+  color: #1fa76f;
+}
+
+.hero-search-field-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.hero-search-field-content label {
+  color: #89958f;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+.hero-search-field-content select,
+.hero-search-field-content input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #26332c;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero-search-field-content select {
+  cursor: pointer;
+}
+
+.hero-search-field-content input::placeholder {
+  color: #9ba6a1;
+}
+
+/* =========================================================
+   SEARCH BUTTON
+   ========================================================= */
+
+.hero-search-button {
+  min-width: 52px;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #1fa76f;
+  border-radius: 11px;
+
+  background: #1fa76f;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(31, 167, 111, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-search-button:hover {
+  background: #188e5d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(31, 167, 111, 0.24);
+}
+
+.hero-search-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   HERO TRUST POINTS
+   ========================================================= */
+
+.hero-trust-points {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 20px;
+}
+
+.hero-trust-point {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #6f7c75;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.hero-trust-point svg {
+  color: #1fa76f;
+}
+
+/* =========================================================
+   HERO QUICK LINKS
+   ========================================================= */
+
+.hero-quick-links {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 27px;
+}
+
+.hero-quick-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 35px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e0e9e4;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #617068;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.hero-quick-link:hover {
+  border-color: #9ed4ba;
+
+  background: #f1f8f4;
+
+  color: #188e5d;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+  position: relative;
+
+  min-height: 510px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(31, 167, 111, 0.13),
+      rgba(31, 167, 111, 0.025) 65%,
+      transparent 70%
+    );
+}
+
+/* =========================================================
+   HOUSE ILLUSTRATION
+   ========================================================= */
+
+.hero-house {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 470px);
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-house-main {
+  position: relative;
+
+  width: 330px;
+  height: 235px;
+
+  border: 1px solid #d7e6de;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eef7f2
+    );
+
+  box-shadow:
+    0 25px 55px rgba(15, 35, 25, 0.1);
+}
+
+.hero-house-main::before {
+  content: "";
+
+  position: absolute;
+
+  left: -28px;
+  top: -90px;
+
+  width: 386px;
+  height: 145px;
+
+  background: #17251e;
+
+  clip-path: polygon(
+    50% 0%,
+    100% 100%,
+    0% 100%
+  );
+
+  border-radius: 5px;
+}
+
+.hero-house-window {
+  position: absolute;
+
+  width: 70px;
+  height: 78px;
+
+  top: 50px;
+
+  border: 5px solid #d8e9e1;
+  border-radius: 7px;
+
+  background: #bde7d2;
+}
+
+.hero-house-window.left {
+  left: 40px;
+}
+
+.hero-house-window.right {
+  right: 40px;
+}
+
+.hero-house-door {
+  position: absolute;
+
+  width: 62px;
+  height: 105px;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  border-radius: 7px 7px 0 0;
+
+  background: #1fa76f;
+}
+
+.hero-house-door::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  top: 52%;
+  right: 8px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   FLOATING CARDS
+   ========================================================= */
+
+.hero-floating-card {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(224, 234, 229, 0.95);
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 15px 35px rgba(15, 35, 25, 0.1);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-floating-card.verify {
+  top: 60px;
+  right: 0;
+}
+
+.hero-floating-card.local {
+  bottom: 50px;
+  left: 0;
+}
+
+.hero-floating-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #eff8f4;
+  color: #1fa76f;
+}
+
+.hero-floating-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.hero-floating-text strong {
+  color: #18231e;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hero-floating-text span {
+  color: #7c8982;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .hero {
+    padding-top: 55px;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-description {
+    max-width: 650px;
+  }
+
+  .hero-search-box {
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    min-height: 440px;
+  }
+
+  .hero-floating-card.verify {
+    right: 8%;
+  }
+
+  .hero-floating-card.local {
+    left: 8%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+
+    padding: 48px 0 35px;
+  }
+
+  .hero .container {
+    width: min(
+      calc(100% - 36px),
+      1200px
+    );
+  }
+
+  .hero h1 {
+    font-size: 40px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .hero-search-box {
+    margin-top: 26px;
+
+    padding: 7px;
+
+    border-radius: 15px;
+  }
+
+  .hero-search-tabs {
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .hero-search-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-search-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-button {
+    width: 100%;
+
+    min-height: 48px;
+  }
+
+  .hero-trust-points {
+    gap: 11px 16px;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+
+    margin-top: 15px;
+  }
+
+  .hero-visual::before {
+    width: 330px;
+    height: 330px;
+  }
+
+  .hero-house {
+    transform: scale(0.78);
+  }
+
+  .hero-floating-card {
+    padding: 9px 11px;
+  }
+
+  .hero-floating-card.verify {
+    top: 20px;
+    right: 0;
+  }
+
+  .hero-floating-card.local {
+    bottom: 20px;
+    left: 0;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-eyebrow {
+    font-size: 9px;
+  }
+
+  .hero-quick-links {
+    gap: 7px;
+  }
+
+  .hero-quick-link {
+    font-size: 10px;
+
+    padding: 0 10px;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+  }
+
+  .hero-house {
+    transform: scale(0.62);
+  }
+
+  .hero-floating-card {
+    transform: scale(0.9);
+  }
+
+  .hero-floating-card.verify {
+    right: -5px;
+  }
+
+  .hero-floating-card.local {
+    left: -5px;
+  }
+}

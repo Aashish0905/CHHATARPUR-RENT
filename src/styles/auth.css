@@ -1,0 +1,784 @@
+/* =========================================================
+   AUTH PAGES
+   LOGIN + SIGNUP
+   CHHATARPUR RENT
+========================================================= */
+
+/* =========================================================
+   COMMON AUTH PAGE
+========================================================= */
+
+.login-page,
+.signup-page {
+  min-height: calc(100vh - 78px);
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(31, 167, 111, 0.08),
+      transparent 32%
+    ),
+    var(--bg);
+}
+
+.login-container,
+.signup-container {
+  width: 100%;
+  max-width: 1180px;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+
+  gap: 70px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   AUTH INFO
+========================================================= */
+
+.login-info,
+.signup-info {
+  max-width: 500px;
+}
+
+.login-badge,
+.signup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border: 1px solid rgba(31, 167, 111, 0.15);
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.login-info h1,
+.signup-info h1 {
+  margin: 17px 0 16px;
+
+  color: var(--dark);
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 850;
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+
+.login-info > p,
+.signup-info > p {
+  max-width: 470px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   AUTH BENEFITS
+========================================================= */
+
+.login-benefits,
+.signup-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  margin-top: 28px;
+}
+
+.login-benefit,
+.signup-benefit {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #46564e;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login-benefit-icon,
+.signup-benefit-icon {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border: 1px solid rgba(31, 167, 111, 0.12);
+  border-radius: 10px;
+}
+
+/* =========================================================
+   AUTH CARD
+========================================================= */
+
+.login-card,
+.signup-card {
+  width: 100%;
+  padding: 34px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 60px rgba(8, 20, 15, 0.08),
+    0 4px 15px rgba(8, 20, 15, 0.03);
+}
+
+.login-card-header,
+.signup-card-header {
+  margin-bottom: 25px;
+}
+
+.login-card-header h2,
+.signup-card-header h2 {
+  margin: 0;
+
+  color: var(--dark);
+
+  font-size: 25px;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.login-card-header p,
+.signup-card-header p {
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   LOGIN TABS
+========================================================= */
+
+.login-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 5px;
+  margin-bottom: 22px;
+  padding: 5px;
+
+  background: #f1f5f2;
+  border-radius: 12px;
+}
+
+.login-tab {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--muted);
+  background: transparent;
+
+  border: 0;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-tab:hover {
+  color: var(--dark);
+}
+
+.login-tab.active {
+  color: var(--dark);
+  background: #ffffff;
+
+  box-shadow: 0 3px 10px rgba(8, 20, 15, 0.07);
+}
+
+/* =========================================================
+   AUTH FORM
+========================================================= */
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.login-field,
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.login-field label,
+.signup-field label {
+  color: #35443d;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.login-input-wrap,
+.signup-input-wrap {
+  position: relative;
+}
+
+.login-input,
+.signup-input,
+.signup-select {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 0 14px;
+
+  color: var(--dark);
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-input::placeholder,
+.signup-input::placeholder {
+  color: #a1aca6;
+}
+
+.login-input:hover,
+.signup-input:hover,
+.signup-select:hover {
+  border-color: #c8d7cf;
+}
+
+.login-input:focus,
+.signup-input:focus,
+.signup-select:focus {
+  background: #ffffff;
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 4px rgba(31, 167, 111, 0.1);
+}
+
+/* =========================================================
+   LOGIN PASSWORD
+========================================================= */
+
+.login-password-wrap {
+  position: relative;
+}
+
+.login-password-wrap .login-input {
+  padding-right: 48px;
+}
+
+.login-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--muted);
+  background: transparent;
+
+  border: 0;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.login-password-toggle:hover {
+  color: var(--dark);
+}
+
+/* =========================================================
+   LOGIN OPTIONS
+========================================================= */
+
+.login-form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin-top: -2px;
+}
+
+.login-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.login-remember input {
+  width: 14px;
+  height: 14px;
+
+  accent-color: var(--primary);
+}
+
+.login-forgot {
+  color: var(--primary-dark);
+
+  font-size: 11px;
+  font-weight: 750;
+
+  text-decoration: none;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SIGNUP ACCOUNT TYPES
+========================================================= */
+
+.signup-account-types {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.signup-account-type {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  color: var(--muted);
+  background: #f8faf9;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 750;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.signup-account-type:hover {
+  transform: translateY(-2px);
+
+  color: var(--dark);
+
+  border-color: rgba(31, 167, 111, 0.28);
+}
+
+.signup-account-type.active {
+  color: var(--primary-dark);
+  background: var(--primary-light);
+
+  border-color: rgba(31, 167, 111, 0.45);
+}
+
+/* =========================================================
+   SIGNUP FORM ROW
+========================================================= */
+
+.signup-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.signup-select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  padding-right: 38px;
+
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #68756f 50%),
+    linear-gradient(135deg, #68756f 50%, transparent 50%);
+
+  background-position:
+    calc(100% - 17px) 20px,
+    calc(100% - 12px) 20px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+/* =========================================================
+   SIGNUP PASSWORD
+========================================================= */
+
+.signup-input[type="password"],
+.signup-input[type="text"] {
+  padding-right: 45px;
+}
+
+/* =========================================================
+   SUBMIT BUTTONS
+========================================================= */
+
+.login-submit,
+.signup-submit {
+  width: 100%;
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+  margin-top: 3px;
+
+  color: #ffffff;
+  background: var(--primary);
+
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-submit:hover,
+.signup-submit:hover {
+  transform: translateY(-2px);
+
+  background: var(--primary-dark);
+
+  box-shadow: 0 10px 24px rgba(31, 167, 111, 0.2);
+}
+
+.login-submit:active,
+.signup-submit:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   SIGNUP TERMS
+========================================================= */
+
+.signup-terms {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.signup-terms input {
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  margin-top: 2px;
+
+  accent-color: var(--primary);
+}
+
+.signup-terms a {
+  color: var(--primary-dark);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.signup-terms a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   AUTH FOOT LINKS
+========================================================= */
+
+.login-signup,
+.signup-login {
+  margin: 19px 0 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  text-align: center;
+}
+
+.login-signup a,
+.signup-login a {
+  color: var(--primary-dark);
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.login-signup a:hover,
+.signup-login a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SECURITY NOTE
+========================================================= */
+
+.login-security,
+.signup-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+  margin-top: 18px;
+  padding-top: 17px;
+
+  color: #718078;
+
+  border-top: 1px solid var(--border);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.login-security svg,
+.signup-security svg {
+  flex: 0 0 auto;
+  color: var(--primary);
+}
+
+/* =========================================================
+   AUTH FOCUS
+========================================================= */
+
+.login-tab:focus-visible,
+.login-password-toggle:focus-visible,
+.login-submit:focus-visible,
+.signup-account-type:focus-visible,
+.signup-submit:focus-visible {
+  outline: 3px solid rgba(31, 167, 111, 0.18);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .login-container,
+  .signup-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 650px;
+  }
+
+  .login-info,
+  .signup-info {
+    max-width: 650px;
+    text-align: center;
+  }
+
+  .login-info > p,
+  .signup-info > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-benefits,
+  .signup-benefits {
+    align-items: center;
+  }
+
+  .login-card,
+  .signup-card {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .login-page,
+  .signup-page {
+    min-height: auto;
+    padding: 45px 0 60px;
+  }
+
+  .login-container,
+  .signup-container {
+    gap: 30px;
+  }
+
+  .login-info h1,
+  .signup-info h1 {
+    font-size: 36px;
+  }
+
+  .login-info > p,
+  .signup-info > p {
+    font-size: 13px;
+  }
+
+  .login-card,
+  .signup-card {
+    padding: 23px 18px;
+    border-radius: 19px;
+  }
+
+  .login-card-header h2,
+  .signup-card-header h2 {
+    font-size: 22px;
+  }
+
+  .signup-account-types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .login-form-options {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .login-benefit,
+  .signup-benefit {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .login-card,
+  .signup-card {
+    padding: 20px 15px;
+  }
+
+  .login-info h1,
+  .signup-info h1 {
+    font-size: 32px;
+  }
+
+  .signup-account-type {
+    min-height: 65px;
+    font-size: 9px;
+  }
+
+  .login-input,
+  .signup-input,
+  .signup-select {
+    min-height: 46px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .login-tab,
+  .signup-account-type,
+  .login-submit,
+  .signup-submit {
+    transition: none;
+  }
+}
